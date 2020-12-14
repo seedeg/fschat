@@ -1,4 +1,5 @@
-﻿using FsChat.Providers.Logging;
+﻿using FsChat.Providers.Chat.Settings;
+using FsChat.Providers.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Threading;
@@ -73,7 +74,7 @@ namespace FsChat.Providers.Chat.Test
             var sessionId = Guid.NewGuid();
             Assert.IsTrue(queue.Enqueue(new ChatSession(sessionId)));
 
-            Thread.Sleep((Constants.ChatConstants.ChatSessionTimeoutSeconds + 2) * 1000);
+            Thread.Sleep((ChatSettings.ChatSessionTimeoutSeconds + 2) * 1000);
             Assert.IsNull(queue.GetChatSession(sessionId));
         }
     }

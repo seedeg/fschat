@@ -2,6 +2,7 @@
 using FsChat.Interfaces.Logging;
 using FsChat.Providers.Chat.Agents;
 using FsChat.Providers.Chat.Interfaces;
+using FsChat.Providers.Chat.Settings;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -45,12 +46,12 @@ namespace FsChat.Providers.Chat
 
             var capacity = 0m;
 
-            if (juniors.Any()) capacity += juniors.Count() * Constants.ChatConstants.MaxChatConcurrency * juniors.First().Capacity;
-            if (midLevels.Any()) capacity += midLevels.Count() * Constants.ChatConstants.MaxChatConcurrency * midLevels.First().Capacity;
-            if (seniors.Any()) capacity += seniors.Count() * Constants.ChatConstants.MaxChatConcurrency * seniors.First().Capacity;
-            if (teamLeads.Any()) capacity += teamLeads.Count() * Constants.ChatConstants.MaxChatConcurrency * teamLeads.First().Capacity;
+            if (juniors.Any()) capacity += juniors.Count() * ChatSettings.MaxChatConcurrency * juniors.First().Capacity;
+            if (midLevels.Any()) capacity += midLevels.Count() * ChatSettings.MaxChatConcurrency * midLevels.First().Capacity;
+            if (seniors.Any()) capacity += seniors.Count() * ChatSettings.MaxChatConcurrency * seniors.First().Capacity;
+            if (teamLeads.Any()) capacity += teamLeads.Count() * ChatSettings.MaxChatConcurrency * teamLeads.First().Capacity;
 
-            capacity *= Constants.ChatConstants.QueueSizeMultiplier;
+            capacity *= ChatSettings.QueueSizeMultiplier;
             return (int)capacity;
         }
 
@@ -128,7 +129,7 @@ namespace FsChat.Providers.Chat
         {
             foreach (var teamMember in team.Values)
             {
-                var expiredSessionsToRemove = teamMember.ChatSessionQ.Where(x => DateTime.UtcNow.Subtract(x.Value.LastHeartbeatDate).TotalSeconds > Constants.ChatConstants.ChatSessionTimeoutSeconds).ToList();
+                var expiredSessionsToRemove = teamMember.ChatSessionQ.Where(x => DateTime.UtcNow.Subtract(x.Value.LastHeartbeatDate).TotalSeconds > ChatSettings.ChatSessionTimeoutSeconds).ToList();
                 foreach (var expiredSessionToRemove in expiredSessionsToRemove)
                 {
                     if (teamMember.ChatSessionQ.TryRemove(expiredSessionToRemove.Key, out ChatSession removedSession))

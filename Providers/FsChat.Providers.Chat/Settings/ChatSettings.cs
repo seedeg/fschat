@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FsChat.Constants
+namespace FsChat.Providers.Chat.Settings
 {
-    public static class ChatConstants
+    public static class ChatSettings
     {
         public static short MaxChatConcurrency = 10;
         public static decimal QueueSizeMultiplier = 1.5m;

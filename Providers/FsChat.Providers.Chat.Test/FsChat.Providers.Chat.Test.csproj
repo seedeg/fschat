@@ -56,10 +56,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Constants\FsChat.Constants\FsChat.Constants.csproj">
-      <Project>{b7cf7a7a-f22d-4a18-90b8-a87e8a28424f}</Project>
-      <Name>FsChat.Constants</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Contracts\FsChat.Contracts\FsChat.Contracts.csproj">
       <Project>{040ddeae-09f0-4e1d-a378-b228e0fc62c7}</Project>
       <Name>FsChat.Contracts</Name>

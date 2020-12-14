@@ -1,6 +1,7 @@
 ﻿using FsChat.Interfaces.Logging;
 using FsChat.Providers.Chat.Agents;
 using FsChat.Providers.Chat.Interfaces;
+using FsChat.Providers.Chat.Settings;
 using System;
 using System.Collections.Concurrent;
 using System.Linq;
@@ -136,7 +137,7 @@ namespace FsChat.Providers.Chat
 
         private void RemoveExpiredSessions()
         {
-            var expiredSessionsToRemove = queue.Where(x => DateTime.UtcNow.Subtract(x.Value.LastHeartbeatDate).TotalSeconds > Constants.ChatConstants.ChatSessionTimeoutSeconds).ToList();
+            var expiredSessionsToRemove = queue.Where(x => DateTime.UtcNow.Subtract(x.Value.LastHeartbeatDate).TotalSeconds > ChatSettings.ChatSessionTimeoutSeconds).ToList();
             foreach (var expiredSessionToRemove in expiredSessionsToRemove)
             {
                 if (queue.TryRemove(expiredSessionToRemove.Key, out ChatSession removedSession))
