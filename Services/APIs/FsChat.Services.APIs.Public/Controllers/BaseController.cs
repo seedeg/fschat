@@ -1,6 +1,5 @@
 ﻿using FsChat.Interfaces;
 using FsChat.Interfaces.Logging;
-using FsChat.Utilities.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,16 +33,6 @@ namespace FsChat.Services.APIs.Public.Controllers
             }
 
             base.Initialize(controllerContext);
-        }
-
-        public HttpResponseMessage Options()
-        {
-            return new HttpResponseMessage { StatusCode = HttpStatusCode.OK };
-        }
-
-        internal string GetIp()
-        {
-            return HttpContext.Current == null ? string.Empty : Ip.RetrieveClientIp(new HttpRequestWrapper(HttpContext.Current.Request));
         }
     }
 }

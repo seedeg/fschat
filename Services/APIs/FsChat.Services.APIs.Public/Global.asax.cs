@@ -27,9 +27,6 @@ namespace FsChat.Services.APIs.Public
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            //DbConfiguration.SetConfiguration(new MySqlEFConfiguration());
         }
 
         private void RegesterDependencyResolvers()
