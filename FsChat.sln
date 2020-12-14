@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FsChat.Contracts", "Contracts\FsChat.Contracts\FsChat.Contracts.csproj", "{040DDEAE-09F0-4E1D-A378-B228E0FC62C7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{795DD3B7-CCA2-4413-A066-D37321185391}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{502CFE13-23B9-4F61-A939-E6CD65F646ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{61C7F7BA-FF2A-4662-A9EF-928D172DCC13}"
