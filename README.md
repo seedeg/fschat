@@ -1,5 +1,3 @@
-# fs-chat
-
 Prerequisites
  - Angular CLI needs to be installed (See https://cli.angular.io/)
 
@@ -10,3 +8,5 @@ Steps to run:
 	- npm install
 	- ng serve
 	- Angular app should be hosted on http://localhost:4200 by default
+	
+API Swagger Documentation can be found at: http://localhost:6001/swagger/ui/index
