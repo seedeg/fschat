@@ -1,6 +1,6 @@
 # fs-chat
 
-Prerequisite
+Prerequisites
  - Angular CLI needs to be installed (See https://cli.angular.io/)
 
 Steps to run:
