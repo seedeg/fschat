@@ -1,4 +1,5 @@
 ﻿using FsChat.Contracts.Data;
+using FsChat.Providers.Chat.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace FsChat.Providers.Chat.Agents
         public TeamLeadSupportAgent(Guid agentId) : base(agentId)
         {
             Seniority = Enums.SupportAgentSeniority.TeamLead;
-            Capacity = 0.5m;
+            Capacity = AgentSettings.TeamLeadCapacity;
         }
     }
 }

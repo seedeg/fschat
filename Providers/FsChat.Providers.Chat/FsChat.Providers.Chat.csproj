@@ -70,6 +70,7 @@
     <Compile Include="Interfaces\IChatSession.cs" />
     <Compile Include="Interfaces\IChatSessionQueue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\AgentSettings.cs" />
     <Compile Include="Settings\ChatSettings.cs" />
   </ItemGroup>
   <ItemGroup>
