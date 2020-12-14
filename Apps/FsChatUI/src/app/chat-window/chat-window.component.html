@@ -1,0 +1,11 @@
+<div style="width:100%">
+    <button *ngIf="!sessionId" type="button" (click)="startSession()">Start Chat Session</button>
+    <button *ngIf="sessionId" type="button" (click)="endSession()">End Chat Session</button>
+</div>
+<div style="width:100%">
+    <p *ngIf="error" style="color:red;">{{error}}</p>
+</div>
+<div style="width:100%">
+    <p *ngIf="status">{{status}}</p>
+</div>
+
