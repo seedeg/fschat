@@ -333,10 +333,6 @@
       <Project>{7b2c1f8c-7f6b-4e9b-99c8-3ecbd618d5c6}</Project>
       <Name>FsChat.Providers.Logging</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Utilities\FsChat.Utilities.Common\FsChat.Utilities.Common.csproj">
-      <Project>{520e3a77-df42-47d3-8666-dd0129decfd4}</Project>
-      <Name>FsChat.Utilities.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
